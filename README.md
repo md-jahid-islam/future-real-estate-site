@@ -2,7 +2,7 @@
 
 create a high end and futuristic webside for real estate 
 
-## Collaborate with GPT Engineer
+## Collaborate with Full Stack Developer 
 
 This is a synced repository 🌟🤖
 
