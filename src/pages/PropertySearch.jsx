@@ -1,7 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
-const properties = [
+ const properties = [
   {
     id: 1,
     title: "Luxury Villa",
@@ -50,30 +50,30 @@ const properties = [
     description: "Beautiful lake house with modern amenities and stunning views.",
     image: "/images/property-8.jpg",
   },
-];
+ ];
 
-const PropertySearch = () => {
+ const PropertySearch = () => {
   return (
     <div className="container mx-auto space-y-8 font-serif">
       <h1 className="text-3xl font-bold text-center">Property Search</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {properties.map((property) => (
-          <Card key={property.id}>
+           <Card key={property.id}>
             <img src={property.image} alt={property.title} className="w-full h-48 object-cover" />
             <CardHeader>
-              <CardTitle>{property.title}</CardTitle>
+            <CardTitle>{property.title}</CardTitle>
             </CardHeader>
             <CardContent>
-              <p>{property.description}</p>
+            <p>{property.description}</p>
             </CardContent>
             <CardFooter>
-              <Button>View Details</Button>
+            <Button>View Details</Button>
             </CardFooter>
           </Card>
         ))}
       </div>
     </div>
   );
-};
+ };
 
-export default PropertySearch;
+ export default PropertySearch;

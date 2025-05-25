@@ -6,20 +6,18 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 
-const searchSchema = z.object({
+ const searchSchema = z.object({
   location: z.string().min(1, "Location is required"),
   propertyType: z.string().min(1, "Property type is required"),
-  priceRange: z.string().min(1, "Price range is required"),
-});
+  priceRange: z.string().min(1, "Price range is required"),});
 
-const contactSchema = z.object({
+ const contactSchema = z.object({
   name: z.string().min(1, "Name is required"),
   email: z.string().email("Invalid email address"),
   phone: z.string().min(1, "Phone number is required"),
-  message: z.string().min(1, "Message is required"),
-});
+  message: z.string().min(1, "Message is required"),});
 
-const Index = () => {
+ const Index = () => {
   const searchForm = useForm({
     resolver: zodResolver(searchSchema),
   });
@@ -32,11 +30,11 @@ const Index = () => {
     console.log("Search data:", data);
   };
 
-  const onContactSubmit = (data) => {
+   const onContactSubmit = (data) => {
     console.log("Contact data:", data);
-  };
+   };
 
-  return (
+   return (
     <div className="space-y-16 font-serif">
       {/* Hero Section */}
       <section className="relative h-[600px] bg-gray-800 text-white">
@@ -60,37 +58,37 @@ const Index = () => {
           <Card>
             <img src="/images/featured-property-1.jpg" alt="Luxury Villa" className="w-full h-48 object-cover" />
             <CardHeader>
-              <CardTitle>Luxury Villa 1</CardTitle>
+            <CardTitle>Luxury Villa 1</CardTitle>
             </CardHeader>
             <CardContent>
-              <p>Beautiful villa with modern amenities and stunning views.</p>
+            <p>Beautiful villa with modern amenities and stunning views.</p>
             </CardContent>
             <CardFooter>
-              <Button>View Details</Button>
+            <Button>View Details</Button>
             </CardFooter>
           </Card>
           <Card>
             <img src="/images/featured-property-2.jpg" alt="Luxury Apartment" className="w-full h-48 object-cover" />
             <CardHeader>
-              <CardTitle>Luxury Apartment 2</CardTitle>
+            <CardTitle>Luxury Apartment 2</CardTitle>
             </CardHeader>
             <CardContent>
-              <p>Beautiful apartment with modern amenities and stunning views.</p>
+            <p>Beautiful apartment with modern amenities and stunning views.</p>
             </CardContent>
             <CardFooter>
-              <Button>View Details</Button>
+            <Button>View Details</Button>
             </CardFooter>
           </Card>
           <Card>
             <img src="/images/featured-property-3.jpg" alt="Luxury Mansion" className="w-full h-48 object-cover" />
             <CardHeader>
-              <CardTitle>Luxury Mansion 3</CardTitle>
+            <CardTitle>Luxury Mansion 3</CardTitle>
             </CardHeader>
             <CardContent>
-              <p>Beautiful mansion with modern amenities and stunning views.</p>
+            <p>Beautiful mansion with modern amenities and stunning views.</p>
             </CardContent>
             <CardFooter>
-              <Button>View Details</Button>
+            <Button>View Details</Button>
             </CardFooter>
           </Card>
         </div>
@@ -102,7 +100,7 @@ const Index = () => {
         <div className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-8">
           <img src="/images/about-us.jpg" alt="About Us" className="w-full md:w-1/2 h-64 object-cover" />
           <p className="text-lg">
-            We are a premier real estate company dedicated to providing luxury properties for the modern lifestyle. Our mission is to help you find your dream home with ease and confidence.
+          We are a premier real estate company dedicated to providing luxury properties for the modern lifestyle. Our mission is to help you find your dream home with ease and confidence.
           </p>
         </div>
       </section>
@@ -125,6 +123,6 @@ const Index = () => {
       </section>
     </div>
   );
-};
+ };
 
-export default Index;
+ export default Index;

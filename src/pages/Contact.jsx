@@ -6,14 +6,13 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 
-const contactSchema = z.object({
+ const contactSchema = z.object({
   name: z.string().min(1, "Name is required"),
   email: z.string().email("Invalid email address"),
   phone: z.string().min(1, "Phone number is required"),
-  message: z.string().min(1, "Message is required"),
-});
+  message: z.string().min(1, "Message is required"),});
 
-const Contact = () => {
+ const Contact = () => {
   const contactForm = useForm({
     resolver: zodResolver(contactSchema),
   });
@@ -26,7 +25,7 @@ const Contact = () => {
     <div className="container mx-auto space-y-8 font-serif">
       <Card>
         <CardHeader>
-          <CardTitle>Contact Us</CardTitle>
+        <CardTitle>Contact Us</CardTitle>
         </CardHeader>
         <CardContent>
           <form onSubmit={contactForm.handleSubmit(onContactSubmit)} className="space-y-4">
@@ -45,6 +44,6 @@ const Contact = () => {
       </Card>
     </div>
   );
-};
+ };
 
-export default Contact;
+ export default Contact;
